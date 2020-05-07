@@ -1,14 +1,22 @@
 package com.project.keyboard;
 
 
+import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Context;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.media.AudioManager;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class RcmKeyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
@@ -16,6 +24,14 @@ public class RcmKeyboard extends InputMethodService implements KeyboardView.OnKe
     private KeyboardView kv;
     private Keyboard keyboard;
     private Keyboard keyboard2;
+
+    private StringBuilder mComposing = new StringBuilder();
+    private boolean mPredictionOn;
+    private boolean mCompletionOn;
+    private int mLastDisplayWidth;
+    private boolean mCapsLock;
+    private long mLastShiftTime;
+    private long mMetaState;
 
     private boolean isCaps = false;
 
@@ -69,6 +85,8 @@ public class RcmKeyboard extends InputMethodService implements KeyboardView.OnKe
         }
     }
 
+
+
     private void playClick(int i){
         AudioManager am = (AudioManager)getSystemService(AUDIO_SERVICE);
         switch (i){
@@ -85,6 +103,7 @@ public class RcmKeyboard extends InputMethodService implements KeyboardView.OnKe
                 default: am.playSoundEffect(AudioManager.FX_KEYPRESS_STANDARD);
         }
     }
+
 
     @Override
     public void onText(CharSequence charSequence) {

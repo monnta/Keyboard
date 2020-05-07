@@ -22,17 +22,31 @@
     <color name="candidate_recommended">#FFE35900</color>
     <color name="candidate_other">#ff808080</color>
     <color name="candidate_background">#bbffffff</color>
-
     <color name="keyboard_divider">#BB000000</color>
     <color name="keyboard_bg_color">#BBC7C0C0</color>
     <color name="keyboard_pressed">#BBE93434</color>
-
     <color name="white">#BBFFFFFF</color>
     <color name="colorPrimary">#BB21559D</color>
     <color name="colorPrimaryDark">#BB08123D</color>
     <color name="colorAccent">#BBBA1D1D</color>
+    <color name="candidate_inverted">#FFFFFFFF</color>
+    <color name="candidate_dictionary">#FF101010</color>
+    <color name="candidate_number">#CC5E5A80</color>
+    <!-- <color name="candidate_background">#bbffffff</color>-->
 
-    <color name="colorAcc">#BB54BA1D</color>
+    <color name="candidate_dictionary_background">#BB9AFE2E</color>
+    <!-- Preference -->
+    <color name="preference_background">#bbffffff</color>
+    <color name="preference_text">#ffffffff</color>
+    <color name="preference_title">#FFE35900</color>
+    <color name="limekeyboard_transparent">#00000000</color>
+    <color name="limekeyboard_bar_im_shadow_white">#80000000</color>
+    <color name="limekeyboard_bar_im_shadow_black">#80FFFFFF</color>
+    <color name="limekeyboard_bar_im_text">#FFC0C0C0</color>
+    <color name="limekeyboard_extension_background">#A0000000</color>
+    <color name="limekeyboard_feedback_language_text">#FFFFFFFF</color>
+    <color name="limekeyboard_key_color_white">#FFFFFFFF</color>
+    <color name="limekeyboard_key_color_black">#FF000000</color>
 
 
 

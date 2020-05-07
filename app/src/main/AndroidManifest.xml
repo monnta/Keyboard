@@ -19,9 +19,10 @@
                 <action android:name="android.view.InputMethod"/>
             </intent-filter>
 
-
-
         </service>
+        <service android:name="limesettings.LIMEService" />
+
+
     </application>
 
 </manifest>
